@@ -12,4 +12,4 @@ With this data at hand, this project will aim to answer the following questions 
 4. What was the running business performance of Olist?
 5. Other information such as the proportion of order status, the proportion of payment methods used by the customers.
 
-This dataset is provide by **Olist et al.** from [Kaggle.com](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+This dataset is provided by **Olist et al.** from [Kaggle.com](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
