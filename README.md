@@ -11,3 +11,5 @@ With this data at hand, this project will aim to answer the following questions 
 3. How was the business performance of Olist? We will look at the total number of customers, the total revenue, the average value per customer, the average time it takes to ship to the customers, etc.
 4. What was the running business performance of Olist?
 5. Other information such as the proportion of order status, the proportion of payment methods used by the customers.
+<br/>
+This dataset is provide by *Olist et al.* from [Kaggle.com](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
