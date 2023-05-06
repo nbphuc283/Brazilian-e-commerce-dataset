@@ -72,8 +72,8 @@ SELECT DATE_PART('year', ood.order_purchase_timestamp) AS year,
 	SUM(oopd.payment_value) AS total_rev,
 	ROUND(SUM(oopd.payment_value)::NUMERIC / COUNT(DISTINCT ood.order_id), 2) AS avg_value_per_order,
 	ROUND(SUM(oopd.payment_value)::NUMERIC / COUNT(DISTINCT ood.customer_id), 2) AS avg_value_per_customer,
-	AVG(order_delivered_carrier_date - order_purchase_timestamp) AS avg_purchase_to_carrier,
-	AVG(order_delivered_customer_date - order_delivered_carrier_date) AS avg_carrier_to_customer,
+	JUSTIFY_INTERVAL(SUM(ood.order_delivered_carrier_date - ood.order_purchase_timestamp) / COUNT(DISTINCT ood.order_id)) AS avg_purchase_to_carrier,
+	JUSTIFY_INTERVAL(SUM(ood.order_delivered_customer_date - ood.order_delivered_carrier_date) / COUNT(DISTINCT ood.order_id)) AS avg_carrier_to_customer,
 	ROUND(SUM(oord.review_score)::NUMERIC / COUNT(ood.order_id), 2) AS avg_ratings
 FROM olist_orders_dataset ood
 LEFT JOIN olist_order_payments_dataset oopd 
